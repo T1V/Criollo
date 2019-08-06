@@ -258,8 +258,13 @@
                 // Parse the header
                 NSMutableDictionary<NSString *, NSString *> * headerFields = [NSMutableDictionary dictionary];
                 NSArray<NSString *> * headerLines = [headerString componentsSeparatedByString:@"\r\n"];
+                __block BOOL headerParseError = NO;
                 [headerLines enumerateObjectsUsingBlock:^(NSString * _Nonnull headerLine, NSUInteger idx, BOOL * _Nonnull stop) { @autoreleasepool {
                     NSArray* headerComponents = [headerLine componentsSeparatedByString:CRRequestHeaderNameSeparator];
+                    if (headerComponents.count < 2) {
+                        headerParseError = YES;
+                        return;
+                    }
                     NSString* headerName = [headerComponents[0] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].lowercaseString;
                     NSString* headerValue = [headerComponents[1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
                     NSArray* headerValueComponents = [headerValue componentsSeparatedByString:CRRequestHeaderSeparator];
@@ -281,6 +286,13 @@
                     [self.files[currentMultipartFileKey] finishWriting];
                 }
 
+                if (headerParseError) {
+                    if ( error != nil ) {
+                      *error = [NSError errorWithDomain:CRRequestErrorDomain code:CRRequestErrorMalformedBody userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"Unable to parse multipart body headers",)}];
+                    }
+                    return NO;
+                }
+              
                 // Set the target for the value
                 [self clearBodyParsingTargets];
                 if ( headerFields[CRFileHeaderNameKey].length > 0 ) {
