@@ -275,6 +275,10 @@
                         }
 
                         NSArray* headerValueComponentsParts = [obj componentsSeparatedByString:CRRequestValueSeparator];
+                        if (headerValueComponentsParts.count < 2) {
+                          headerParseError = YES;
+                          return;
+                        }
                         NSString* headerValueComponentsPartName = [headerValueComponentsParts[0] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
                         NSString* headerValueComponentsPartValue = [headerValueComponentsParts[1] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\" "]];
                         headerFields[headerValueComponentsPartName] = headerValueComponentsPartValue;
