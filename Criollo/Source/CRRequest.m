@@ -313,11 +313,12 @@
                 }
 
                 // Extract the remaining data
-                NSData* nextChunkData = [NSData dataWithBytesNoCopy:(void *)data.bytes + headerTerminatorRange.location + headerTerminatorRange.length length:data.length - headerTerminatorRange.location - headerTerminatorRange.length freeWhenDone:NO];
+                if (data.length > NSMaxRange(headerTerminatorRange)) {
+                  NSData* nextChunkData = [NSData dataWithBytesNoCopy:(void *)data.bytes + headerTerminatorRange.location + headerTerminatorRange.length length:data.length - headerTerminatorRange.location - headerTerminatorRange.length freeWhenDone:NO];
 
-                // Call this method again with the remaining data
-                result = [self parseMultipartBodyDataChunk:nextChunkData error:error];
-
+                  // Call this method again with the remaining data
+                  result = [self parseMultipartBodyDataChunk:nextChunkData error:error];
+                }
             } else {
                 // Checkk if this is the end of the message "--boundary--"
                 NSRange terminatorSearchRange = NSMakeRange(nextBoundaryRange.location + nextBoundaryRange.length, data.length - nextBoundaryRange.location - nextBoundaryRange.length);
