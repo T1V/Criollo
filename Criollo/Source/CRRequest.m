@@ -250,7 +250,7 @@
             NSRange headerSearchRange = NSMakeRange(headerStartLocation, data.length - headerStartLocation);
             NSRange headerTerminatorRange = [data rangeOfData:CRLFCRLFData options:0 range:headerSearchRange];
 
-            if ( headerTerminatorRange.location != NSNotFound ) {                                 // We have a header - all good
+              if ( headerSearchRange.location != NSNotFound && headerTerminatorRange.location != NSNotFound ) {                                 // We have a header - all good
 
                 NSData* headerData = [NSData dataWithBytesNoCopy:(void *)data.bytes + headerSearchRange.location length:headerTerminatorRange.location - headerSearchRange.location freeWhenDone:NO];
                 NSString* headerString = [[NSString alloc] initWithBytesNoCopy:(void *)headerData.bytes length:headerData.length encoding:NSUTF8StringEncoding freeWhenDone:NO];
@@ -324,8 +324,11 @@
                 NSRange terminatorSearchRange = NSMakeRange(nextBoundaryRange.location + nextBoundaryRange.length, data.length - nextBoundaryRange.location - nextBoundaryRange.length);
                 NSRange terminatorCRLFRange = [data rangeOfData:CRLFData options:0 range:terminatorSearchRange];
 
-                NSData * terminatorData = [NSData dataWithBytesNoCopy:(void *)data.bytes + terminatorSearchRange.location length:data.length - terminatorCRLFRange.location freeWhenDone:NO];
-                if ( [terminatorData isEqualToData:self.multipartBoundaryPrefixData] ) {
+                NSData * terminatorData = nil;
+                if (terminatorSearchRange.location != NSNotFound) {
+                  [NSData dataWithBytesNoCopy:(void *)data.bytes + terminatorSearchRange.location length:data.length - terminatorCRLFRange.location freeWhenDone:NO];
+                }
+                if ( terminatorData && [terminatorData isEqualToData:self.multipartBoundaryPrefixData] ) {
                     // This is the end of the message
                     result = YES;
                 } else {
