@@ -305,6 +305,9 @@
 		ADC29AF7246D7313007D443E /* CRFCGIConnectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC29AF3246D7306007D443E /* CRFCGIConnectionTests.m */; };
 		ADC29AF8246D7313007D443E /* CRFCGIConnectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC29AF3246D7306007D443E /* CRFCGIConnectionTests.m */; };
 		ADC29AF9246D7314007D443E /* CRFCGIConnectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC29AF3246D7306007D443E /* CRFCGIConnectionTests.m */; };
+		ADC2A33724B50B35009A310A /* CRApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC2A33624B50B35009A310A /* CRApplicationTests.m */; };
+		ADC2A33824B50B35009A310A /* CRApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC2A33624B50B35009A310A /* CRApplicationTests.m */; };
+		ADC2A33924B50B35009A310A /* CRApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC2A33624B50B35009A310A /* CRApplicationTests.m */; };
 		ADD2B60C1BFE70AE00E2E632 /* NSHTTPCookie+Criollo.h in Headers */ = {isa = PBXBuildFile; fileRef = ADD2B60A1BFE70AE00E2E632 /* NSHTTPCookie+Criollo.h */; };
 		ADD2B60D1BFE70AE00E2E632 /* NSHTTPCookie+Criollo.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD2B60B1BFE70AE00E2E632 /* NSHTTPCookie+Criollo.m */; };
 		ADD2B60E1BFE70C300E2E632 /* NSHTTPCookie+Criollo.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD2B60B1BFE70AE00E2E632 /* NSHTTPCookie+Criollo.m */; };
@@ -549,6 +552,7 @@
 		ADC29ADD246D37E1007D443E /* CRStaticDirectoryManager_Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRStaticDirectoryManager_Internal.h; sourceTree = "<group>"; };
 		ADC29ADF246D3977007D443E /* CRStaticDirectoryManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CRStaticDirectoryManagerTests.m; path = CriolloTests/CRStaticDirectoryManagerTests.m; sourceTree = SOURCE_ROOT; };
 		ADC29AF3246D7306007D443E /* CRFCGIConnectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRFCGIConnectionTests.m; sourceTree = "<group>"; };
+		ADC2A33624B50B35009A310A /* CRApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRApplicationTests.m; sourceTree = "<group>"; };
 		ADD2B60A1BFE70AE00E2E632 /* NSHTTPCookie+Criollo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPCookie+Criollo.h"; sourceTree = "<group>"; };
 		ADD2B60B1BFE70AE00E2E632 /* NSHTTPCookie+Criollo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPCookie+Criollo.m"; sourceTree = "<group>"; };
 		ADE99FB51C6B40E10080B1FA /* CRStaticDirectoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRStaticDirectoryManager.h; sourceTree = "<group>"; };
@@ -689,6 +693,7 @@
 				AD0BCC62245EBCEE0014A920 /* CRServerTests.m */,
 				AD542C0D247668F8000E5CEC /* CRServerDelegateTests.m */,
 				ADB32F8D246802D0005D729A /* CRStaticFileManagerTests.m */,
+				ADC2A33624B50B35009A310A /* CRApplicationTests.m */,
 			);
 			path = CriolloTests;
 			sourceTree = "<group>";
@@ -1218,7 +1223,7 @@
 			attributes = {
 				CLASSPREFIX = CR;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Cătălin Stan";
 				TargetAttributes = {
 					4ABB1DD91F9E6B0900480EC7 = {
@@ -1246,7 +1251,6 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 			);
 			mainGroup = ADEDB3471AEFBCF700A26AF1;
@@ -1460,6 +1464,7 @@
 				AD0BCC68245EBD5D0014A920 /* CRServerTests.m in Sources */,
 				ADC29AF6246D730C007D443E /* CRHTTPConnectionTests.m in Sources */,
 				AD7009F82479320800F3C06A /* CRStaticFileManagerTests.m in Sources */,
+				ADC2A33924B50B35009A310A /* CRApplicationTests.m in Sources */,
 				4ABB1E471F9E70B000480EC7 /* CRViewTests.m in Sources */,
 				ADC29AF9246D7314007D443E /* CRFCGIConnectionTests.m in Sources */,
 				4ABB1E451F9E70AA00480EC7 /* CRMimeTypeHelperTests.m in Sources */,
@@ -1487,6 +1492,7 @@
 				AD0BCC63245EBCEE0014A920 /* CRServerTests.m in Sources */,
 				AD7F2F711F1A1D6D001DD6BE /* CRMimeTypeHelperTests.m in Sources */,
 				ADC29AE0246D3977007D443E /* CRStaticDirectoryManagerTests.m in Sources */,
+				ADC2A33724B50B35009A310A /* CRApplicationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1499,6 +1505,7 @@
 				AD0BCC67245EBD5C0014A920 /* CRServerTests.m in Sources */,
 				ADC29AF5246D730B007D443E /* CRHTTPConnectionTests.m in Sources */,
 				AD7009F72479320700F3C06A /* CRStaticFileManagerTests.m in Sources */,
+				ADC2A33824B50B35009A310A /* CRApplicationTests.m in Sources */,
 				AD1D44F91F3772ED00C5D260 /* CRViewTests.m in Sources */,
 				ADC29AF8246D7313007D443E /* CRFCGIConnectionTests.m in Sources */,
 				AD1D44E91F37600300C5D260 /* CRNibTests.m in Sources */,
@@ -1626,9 +1633,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1649,8 +1653,6 @@
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -1665,9 +1667,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
@@ -1686,8 +1685,6 @@
 				TARGETED_DEVICE_FAMILY = 3;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1869,9 +1866,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1897,8 +1891,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -1916,9 +1908,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1941,8 +1930,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1968,8 +1955,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CURRENT_PROJECT_VERSION = 45;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1.0;
+				DYLIB_CURRENT_VERSION = 1.0.1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/..";
@@ -1988,6 +1978,7 @@
 				INFOPLIST_FILE = "Criollo/Criollo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MARKETING_VERSION = 1.0.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = io.criollo.Criollo;
 				PRODUCT_NAME = Criollo;
@@ -2019,8 +2010,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CURRENT_PROJECT_VERSION = 45;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1.0;
+				DYLIB_CURRENT_VERSION = 1.0.1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/..";
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -2038,6 +2032,7 @@
 				INFOPLIST_FILE = "Criollo/Criollo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.criollo.Criollo;
 				PRODUCT_NAME = Criollo;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -2061,12 +2056,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -2084,8 +2075,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -2103,13 +2092,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -2120,8 +2105,6 @@
 				LLVM_LTO = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SKIP_INSTALL = NO;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
