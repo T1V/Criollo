@@ -203,7 +203,7 @@
         NSData* CRLFCRLFData = [CRConnection CRLFCRLFData];
 
         // Check if we have something before the boundary
-        if ( nextBoundaryRange.location != 0 ) {                                        // There is an existing chunk
+        if ( nextBoundaryRange.location >= CRLFData.length ) {                                        // There is an existing chunk
 
             // Extract the piece
             NSData* preambleData = [NSData dataWithBytesNoCopy:(void *)data.bytes length:nextBoundaryRange.location - CRLFData.length freeWhenDone:NO];
